@@ -1,0 +1,5 @@
+.venv
+/dist
+/scrape_html.egg-info
+poetry.lock
+__pycache__
