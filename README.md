@@ -1,6 +1,8 @@
 # Generate HTML in string from URL
 
 ```python
+# One Single Page Websites also work
+# Get html from page
 from scraping.scraper import PageSources
 
 page = PageSources('url...')
@@ -8,7 +10,28 @@ page = PageSources('url...')
 print(page.get_current_html())
 ```
 
-## It Need a google chrome driver
+---
+
+```python
+# save data in a directory call web_data
+from scraping.scraper import PageSources
+
+page = PageSources('https://andycode.ga/contact')
+page.get_current_html()
+page.save()
+# page.save(directory='web_page') default
+```
+
+    When create a file it'll get name of hostPage and amount of file in your directory, like:
+    -> web_data
+        -hostPage_1.html
+        -hostPage_2.html
+        -hostPage_3.html
+        ...
+
+---
+
+## It need a Google Chrome Driver
 
 ### To check the version you have of Google Chrome, you can do it from the browser information and in the "Help" section:
 

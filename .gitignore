@@ -3,3 +3,5 @@
 /scrape_html.egg-info
 poetry.lock
 __pycache__
+chromedriver.exe
+test.py
