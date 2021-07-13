@@ -5,7 +5,7 @@
 # Get html from page
 from scraping.scraper import PageSources
 
-page = PageSources('url...')
+page = PageSources('https://...')
 
 print(page.get_current_html())
 ```
@@ -16,11 +16,25 @@ print(page.get_current_html())
 # save data in a directory call web_data
 from scraping.scraper import PageSources
 
-page = PageSources('https://andycode.ga/contact')
+page = PageSources('https://...')
 page.get_current_html()
 page.save()
 # page.save(directory='web_page') default
 ```
+
+---
+
+```python
+#Multiple link
+from scraping.scraper import PageSources
+
+lista = ['https://...','https://...']
+
+page = PageSources()
+page.get_multiple_html(lista)
+```
+
+---
 
     When create a file it'll get name of hostPage and amount of file in your directory, like:
     -> web_data
@@ -28,6 +42,24 @@ page.save()
         -hostPage_2.html
         -hostPage_3.html
         ...
+
+---
+
+```python
+# getting csv file
+from scraping.scraper import PageSources
+
+page = PageSources()
+
+dict_data = [
+    {'name':'a','page':'b'},
+    {'name':'a','page':'b'},
+    {'name':'a','page':'b'}
+]
+
+page.save_csv(dict_data)
+# def save_csv(self, dict_data, outfile = 'output.csv', open_file = 'w'):
+```
 
 ---
 
