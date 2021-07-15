@@ -63,6 +63,21 @@ page.save_csv(dict_data)
 
 ---
 
+```python
+# Using proxy
+from scraping.scraper import PageSources
+
+"""
+PROXY = "158.69.25.178:32769" # IP:PORT or HOST:PORT
+"""
+page = PageSources('https://andycode.ga', headless=False, proxy='158.69.25.178:32769')
+page.get_current_html()
+page.save()
+
+```
+
+---
+
 ## It need a Google Chrome Driver
 
 ### To check the version you have of Google Chrome, you can do it from the browser information and in the "Help" section:
